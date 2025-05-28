@@ -24,3 +24,13 @@ print("Generated Password:", generate_password())
 print("100°C в Fahrenheit:", celsius_to_fahrenheit(100))
 print("212°F в Celsius:", fahrenheit_to_celsius(212))
 
+import re
+
+def is_palindrome(text):
+    #Проверяет, является ли строка палиндромом, игнорируя пробелы и регистр.
+
+    cleaned = re.sub(r'[^a-zA-Z0-9]', '', text).lower()
+    return cleaned == cleaned[::-1]
+
+print("Is 'А роза упала на лапу Азора' a palindrome?", is_palindrome("А роза упала на лапу Азора"))
+

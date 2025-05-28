@@ -1,3 +1,5 @@
+version = "1.1"
+
 def celsius_to_fahrenheit(celsius):
     #Конвертирует температуру из Цельсия в Фаренгейт.
 

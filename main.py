@@ -1,6 +1,8 @@
 import random
 import string
 
+version = "1.0"
+
 def generate_password(length=12):
     #Генерирует случайный пароль из букв, цифр и специальных символов.
 

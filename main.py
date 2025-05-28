@@ -2,6 +2,7 @@ version = "1.1"
 
 import random
 import string
+import re
 
 def generate_password(length=12):
     #Генерирует случайный пароль из букв, цифр и специальных символов.
@@ -20,17 +21,20 @@ def fahrenheit_to_celsius(fahrenheit):
 
     return (fahrenheit - 32) * 5/9
 
-print("Generated Password:", generate_password())
-print("100°C в Fahrenheit:", celsius_to_fahrenheit(100))
-print("212°F в Celsius:", fahrenheit_to_celsius(212))
-
-import re
-
 def is_palindrome(text):
     #Проверяет, является ли строка палиндромом, игнорируя пробелы и регистр.
 
     cleaned = re.sub(r'[^a-zA-Z0-9]', '', text).lower()
     return cleaned == cleaned[::-1]
 
-print("Is 'А роза упала на лапу Азора' a palindrome?", is_palindrome("А роза упала на лапу Азора"))
+def count_words(text):
+    #Подсчитывает количество слов в тексте.
 
+    words = text.split()
+    return len(words)
+
+print("Generated Password:", generate_password())
+print("100°C в Fahrenheit:", celsius_to_fahrenheit(100))
+print("212°F в Celsius:", fahrenheit_to_celsius(212))
+print("Is 'А роза упала на лапу Азора' a palindrome?", is_palindrome("А роза упала на лапу Азора"))
+print("Number of words:", count_words("Это пример текста для подсчета слов."))
